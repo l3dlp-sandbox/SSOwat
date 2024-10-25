@@ -39,14 +39,19 @@ function cached_jwt_verify(data, secret)
         end
         -- As the http_headers is a dictionary and can have any char (we have also the user fullname)
         -- we use the json serializer which is expected to do it correctly
+        -- note we can have special char in the user fullname
         cached = json.encode(decoded)
         cache:set(data, cached, 120)
         logger:debug("Result saved in cache")
-        return decoded['id'], decoded['host'], decoded["user"], decoded["pwd"], decoded["http_headers"], err
+        local headers = { YNH_USER = decoded["user"], YNH_USER_EMAIL = decoded["email"],
+            YNH_USER_FULLNAME = decoded["user_fullname"]}
+        return decoded['id'], decoded['host'], decoded["user"], decoded["pwd"], headers, err
     else
         logger:debug("Result found in cache")
-        data = json.decode(res)
-        return data['id'], data['host'], data["user"], data["pwd"], data["http_headers"], nil
+        local decoded = json.decode(res)
+        local headers = { YNH_USER = decoded["user"], YNH_USER_EMAIL = decoded["email"],
+            YNH_USER_FULLNAME = decoded["user_fullname"]}
+        return decoded['id'], decoded['host'], decoded["user"], decoded["pwd"], headers, nil
     end
 end
 
