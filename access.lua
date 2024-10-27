@@ -276,12 +276,12 @@ if permission ~= nil and ngx.req.get_headers()["Authorization"] ~= nil then
             ngx.req.clear_header("Authorization")
         end
     end
+end
 
-    -- Clean all Yunohost Authentication Headers
-    for k, v in pairs(ngx.req.get_headers()) do
-        if string.starts(k, "YNH_") then
-            ngx.req.clear_header(k)
-        end
+-- Clean all Yunohost Authentication Headers
+for k, v in pairs(ngx.req.get_headers()) do
+    if string.starts(k, "YNH_") then
+        ngx.req.clear_header(k)
     end
 end
 
