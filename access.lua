@@ -44,13 +44,13 @@ function cached_jwt_verify(data, secret)
         cache:set(data, cached, 120)
         logger:debug("Result saved in cache")
         local headers = { YNH_USER = decoded["user"], YNH_USER_EMAIL = decoded["email"],
-            YNH_USER_FULLNAME = decoded["user_fullname"]}
+            YNH_USER_FULLNAME = decoded["fullname"]}
         return decoded['id'], decoded['host'], decoded["user"], decoded["pwd"], headers, err
     else
         logger:debug("Result found in cache")
         local decoded = json.decode(res)
         local headers = { YNH_USER = decoded["user"], YNH_USER_EMAIL = decoded["email"],
-            YNH_USER_FULLNAME = decoded["user_fullname"]}
+            YNH_USER_FULLNAME = decoded["fullname"]}
         return decoded['id'], decoded['host'], decoded["user"], decoded["pwd"], headers, nil
     end
 end
