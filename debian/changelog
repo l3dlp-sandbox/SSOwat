@@ -1,3 +1,11 @@
+ssowat (12.0.2) testing; urgency=low
+
+  - In addition to the Authorization header, inject YNH_USER, YNH_USER_EMAIL and YNH_USER_FULLNAME http headers ([#231](https://github.com/yunohost/yunohost/pull/231))
+
+  Thanks to all contributors <3 ! (Josué Tille)
+
+ -- Alexandre Aubin <alex.aubin@mailoo.org>  Wed, 30 Oct 2024 00:23:41 +0100
+
 ssowat (12.0.1) testing; urgency=low
 
   - Massive rework to interact with the new independent portal-api and split
