@@ -1,3 +1,11 @@
+ssowat (11.2.2) stable; urgency=low
+
+  - [i18n] Translations updated for Dutch, Indonesian, Kabyle, Polish, Turkish
+
+  Thanks to all contributors <3 ! (Aksel Azwaw, Atalay Daban, Kuba Bazan, Mer, cjdw)
+
+ -- tituspijean <tituspijean@yunohost.org>  Wed, 30 Oct 2024 22:28:37 +0100
+
 ssowat (11.2.1.1) stable; urgency=low
 
   - [i18n] Translations updated for Catalan, French, German, Kabyle, Spanish, Swedish
