@@ -1,3 +1,26 @@
+ssowat (12.0.3) stable; urgency=low
+
+  - meta: add maintenance scripts to v12 (dd0afc5)
+
+ -- tituspijean <tituspijean@yunohost.org>  Wed, 30 Oct 2024 22:42:56 +0100
+
+ssowat (12.0.2) testing; urgency=low
+
+  - In addition to the Authorization header, inject YNH_USER, YNH_USER_EMAIL and YNH_USER_FULLNAME http headers ([#231](https://github.com/yunohost/yunohost/pull/231))
+
+  Thanks to all contributors <3 ! (Josué Tille)
+
+ -- Alexandre Aubin <alex.aubin@mailoo.org>  Wed, 30 Oct 2024 00:23:41 +0100
+
+ssowat (12.0.1) testing; urgency=low
+
+  - Massive rework to interact with the new independent portal-api and split
+  the portal front-end into a separate repo. SSOwat now only handles purely
+  the SSO middleware logic (letting the request go through for authenticated
+  users or redirecting to the portal)
+
+ -- Alexandre Aubin <alex.aubin@mailoo.org>  Fri, 26 Jul 2024 22:21:16 +0200
+
 ssowat (11.3.0) stable; urgency=low
 
   - Bump version for 11.3 release
