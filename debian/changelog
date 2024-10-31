@@ -1,3 +1,9 @@
+ssowat (11.3.0) stable; urgency=low
+
+  - Bump version for 11.3 release
+
+ -- Alexandre Aubin <alex.aubin@mailoo.org>  Thu, 31 Oct 2024 13:59:41 +0100
+
 ssowat (11.2.2) stable; urgency=low
 
   - [i18n] Translations updated for Dutch, Indonesian, Kabyle, Polish, Turkish
